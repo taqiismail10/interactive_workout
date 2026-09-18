@@ -1,0 +1,89 @@
+# ── InteractiveWorkout monorepo ─────────────────────────────
+# Root .gitignore. Service-level .gitignore files (web/, api/, db/)
+# add service-specific rules; this file covers shared + repo-level noise.
+
+# ── OS ──
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Editors / IDEs ──
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Logs ──
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ── Env / secrets (keep examples tracked) ──
+.env
+.env.*
+!.env.example
+
+# ── Node / Next.js (applies at any depth) ──
+**/node_modules/
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+coverage/
+.nyc_output/
+**/.next/
+**/out/
+build/
+dist/
+.next/
+out/
+.vercel/
+*.tsbuildinfo
+next-env.d.ts
+
+# ── Go (api/) ──
+*.exe
+*.test
+*.out
+coverage.out
+coverage.html
+/bin/
+/dist/
+vendor/
+
+# ── Prisma / DB ──
+prisma/migrations/dev/
+*.db
+*.sqlite
+postgres-data/
+pgdata/
+
+# ── Docker ──
+.docker/
+
+# ── Local scratch / generated media (repo root) ──
+# Large one-off generation + audit artifacts; brand sources in
+# visual_stuffs/ stay tracked except test crops.
+*.mp4
+*.mov
+desktop_*.png
+mobile_*.png
+tablet_*.png
+scratch_fonts/
+visual_stuffs/test_*.png
+comparison*.png
+
+# ── Misc temp ──
+.tmp/
+tmp/
+*.tmp
+*.bak
+*.pem

@@ -1,0 +1,21 @@
+node_modules/
+coverage/
+
+# Env / secrets (keep examples tracked)
+.env
+.env.*
+!.env.example
+
+# Local Prisma dev shadow / scratch DBs
+prisma/migrations/dev/
+*.db
+*.sqlite
+
+# Logs
+*.log
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+*.swp

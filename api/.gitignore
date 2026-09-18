@@ -1,0 +1,26 @@
+# Go build / test outputs
+*.exe
+*.test
+*.out
+coverage.out
+coverage.html
+/bin/
+/dist/
+/vendor/
+
+# Export artifacts
+*.csv
+
+# Env / secrets (keep examples tracked)
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+*.swp

@@ -1,0 +1,37 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model WaitlistSignup {
+  id           String           @id @db.Uuid
+  email        String           @unique @db.VarChar(254)
+  interest     String?          @db.VarChar(16)
+  referralCode String           @unique @db.VarChar(24)
+  referredBy   String?          @db.VarChar(24)
+  createdAt    DateTime         @default(now()) @db.Timestamptz(6)
+  referrer     WaitlistSignup?  @relation("Referrals", fields: [referredBy], references: [referralCode], onDelete: Restrict, onUpdate: Restrict)
+  referrals    WaitlistSignup[] @relation("Referrals")
+
+  @@index([referredBy])
+  @@index([createdAt, id])
+}
+
+model SiteSetting {
+  id                String   @id @db.VarChar(64)
+  showWaitlistCount Boolean  @default(true)
+  socialLinks       Json     @default("{}")
+  updatedAt         DateTime @default(now()) @db.Timestamptz(6)
+}
+
+model EmailCampaign {
+  id             String   @id @db.Uuid
+  subject        String   @db.VarChar(255)
+  content        String   @db.Text
+  targetAudience String   @db.VarChar(32)
+  recipientCount Int      @default(0)
+  status         String   @db.VarChar(32)
+  sentAt         DateTime @default(now()) @db.Timestamptz(6)
+
+  @@index([sentAt])
+}
