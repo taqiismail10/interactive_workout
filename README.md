@@ -5,8 +5,6 @@
   <img src="web/public/logo-lockup-light.png" alt="InteractiveWorkout logo" width="600" />
 </picture>
 
-# InteractiveWorkout
-
 ---
 
 **Waitlist site for the camera-powered workout game — your body is the controller**
