@@ -151,11 +151,6 @@ See `interactive-workout-waitlist-prd.md` for the full product spec.
 - [ ] Follow-up email to ask the interest question later
 - [ ] Reuse the signup table for real product auth when the game ships
 
-## 🤝 Contributing
-
-Issues and pull requests are welcome! Good first issues are labeled `good first issue`. Please read the [contributing guide](CONTRIBUTING.md) and our [code of conduct](CODE_OF_CONDUCT.md).
-
-Run the checks before pushing:
 
 ```bash
 cd api && go test ./... && go vet ./...
