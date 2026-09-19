@@ -70,15 +70,15 @@ pgdata/
 .docker/
 
 # ── Local scratch / generated media (repo root) ──
-# Large one-off generation + audit artifacts; brand sources in
-# visual_stuffs/ stay tracked except test crops.
+# Large one-off generation + audit artifacts. Brand sources in
+# visual_stuffs/ stay local only (logos served from web/public/).
 *.mp4
 *.mov
 desktop_*.png
 mobile_*.png
 tablet_*.png
 scratch_fonts/
-visual_stuffs/test_*.png
+visual_stuffs/
 comparison*.png
 
 # ── Misc temp ──
