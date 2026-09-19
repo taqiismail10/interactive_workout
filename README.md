@@ -1,5 +1,10 @@
 <div align="center">
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="web/public/logo-lockup-dark.png" />
+  <img src="web/public/logo-lockup-light.png" alt="InteractiveWorkout logo" width="600" />
+</picture>
+
 # InteractiveWorkout
 
 ---
